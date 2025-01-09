@@ -143,7 +143,7 @@ class Tag
     /**
      * @param bool $htmlSpecialCharsDecode
      */
-    public function setHtmlSpecialCharsDecode($htmlSpecialCharsDecode = false): void
+    public function setHtmlSpecialCharsDecode(bool $htmlSpecialCharsDecode = false): void
     {
         $this->HtmlSpecialCharsDecode = $htmlSpecialCharsDecode;
     }
@@ -181,7 +181,7 @@ class Tag
      * @param mixed $attr_key
      * @param mixed $attr_value
      */
-    public function setStyleAttributeValue($attr_key, $attr_value): void
+    public function setStyleAttributeValue(mixed $attr_key,mixed $attr_value): void
     {
         $style_array = $this->getStyleAttributeArray();
         $style_array[$attr_key] = $attr_value;
@@ -226,7 +226,7 @@ class Tag
      *
      * @return void
      */
-    public function removeAttribute($key)
+    public function removeAttribute(mixed $key)
     {
         $key = \strtolower($key);
         unset($this->attr[$key]);
