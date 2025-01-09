@@ -61,7 +61,7 @@ class HtmlNode extends InnerNode
      *
      * @param string|Tag $tag
      */
-    public function __construct($tag)
+    public function __construct(string | Tag $tag)
     {
         if (!$tag instanceof Tag) {
             $tag = new Tag($tag);
@@ -73,7 +73,7 @@ class HtmlNode extends InnerNode
     /**
      * @param bool $htmlSpecialCharsDecode
      */
-    public function setHtmlSpecialCharsDecode($htmlSpecialCharsDecode = false): void
+    public function setHtmlSpecialCharsDecode(bool $htmlSpecialCharsDecode = false): void
     {
         parent::setHtmlSpecialCharsDecode($htmlSpecialCharsDecode);
         $this->tag->setHtmlSpecialCharsDecode($htmlSpecialCharsDecode);
