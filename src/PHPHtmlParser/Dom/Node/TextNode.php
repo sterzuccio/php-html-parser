@@ -45,7 +45,7 @@ class TextNode extends LeafNode
      *
      * @param bool $removeDoubleSpace
      */
-    public function __construct(string $text, $removeDoubleSpace = true)
+    public function __construct(string $text, bool $removeDoubleSpace = true)
     {
         if ($removeDoubleSpace) {
             // remove double spaces
@@ -67,7 +67,7 @@ class TextNode extends LeafNode
     /**
      * @param bool $htmlSpecialCharsDecode
      */
-    public function setHtmlSpecialCharsDecode($htmlSpecialCharsDecode = false): void
+    public function setHtmlSpecialCharsDecode(bool $htmlSpecialCharsDecode = false): void
     {
         parent::setHtmlSpecialCharsDecode($htmlSpecialCharsDecode);
         $this->tag->setHtmlSpecialCharsDecode($htmlSpecialCharsDecode);
