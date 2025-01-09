@@ -137,7 +137,7 @@ abstract class AbstractNode
     /**
      * @param bool $htmlSpecialCharsDecode
      */
-    public function setHtmlSpecialCharsDecode($htmlSpecialCharsDecode = false): void
+    public function setHtmlSpecialCharsDecode(bool $htmlSpecialCharsDecode = false): void
     {
         $this->htmlSpecialCharsDecode = $htmlSpecialCharsDecode;
     }
@@ -307,7 +307,7 @@ abstract class AbstractNode
      *
      * @param string|Tag $tag
      */
-    public function setTag($tag): AbstractNode
+    public function setTag(string | Tag $tag): AbstractNode
     {
         if (\is_string($tag)) {
             $tag = new Tag($tag);
